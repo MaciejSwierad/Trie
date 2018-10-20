@@ -16,11 +16,9 @@ void Trie::insert(std::string word, std::string translation)
         if(!Crawler->children[index])
         {
             Crawler->children[index] = getNode();
-
         }
 
         Crawler = Crawler->children[index];
-
     }
 
     Crawler->isEndOfWord = true;
@@ -37,7 +35,6 @@ Node *Trie::getNode()
     for (int i = 0; i < ALPHABET_SIZE; ++i)
     {
         node->children[i] = nullptr;
-
     }
 
     return node;
@@ -85,11 +82,9 @@ Node* Trie::findNodeWithPrefix(std::string prefix)
         {
             std::cout<<"-"<<std::endl;
             return nullptr;
-
         }
 
         Crawler = Crawler->children[index];
-
     }
 
     return Crawler;
@@ -107,10 +102,7 @@ void Trie::print(Node* node)
             if (node->children[i])
             {
                 print(node->children[i]);
-
             }
-
         }
-
     }
 }

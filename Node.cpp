@@ -1,9 +1,7 @@
 #include <iostream>
 #include <string>
 
-
 #define ALPHABET_SIZE 26
-
 
 struct Node
 {
